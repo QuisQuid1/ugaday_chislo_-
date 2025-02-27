@@ -52,6 +52,7 @@
             this.button_check.TabIndex = 8;
             this.button_check.Text = "button1";
             this.button_check.UseVisualStyleBackColor = true;
+            this.button_check.Click += new System.EventHandler(this.button_check_Click);
             // 
             // label_rez
             // 

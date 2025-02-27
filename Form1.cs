@@ -28,5 +28,34 @@ namespace ugaday_chislo__
             label_pop.Text = "Попытки: 0";
             textBox_chisl.Text = "";
         }
+
+        private void button_check_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox_chisl.Text, out int userGuess))
+            {
+                attempts++;
+                label_pop.Text = $"Попытки: {attempts}";
+
+                if (userGuess < targetNumber)
+                {
+                    label_rez.Text = "Слишком мало! Попробуйте еще раз.";
+                    textBox_chisl.Text = "";
+                }
+                else if (userGuess > targetNumber)
+                {
+                    label_rez.Text = "Слишком много! Попробуйте еще раз.";
+                    textBox_chisl.Text = "";
+                }
+                else
+                {
+                    label_rez.Text = $"Поздравляю! Вы угадали число за {attempts} попыток.";
+                    button_check.Enabled = false;
+                }
+            }
+            else
+            {
+                label_rez.Text = "Пожалуйста, введите корректное число.";
+            }
+        }
     }
 }
