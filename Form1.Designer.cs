@@ -43,6 +43,7 @@
             this.button_povtor.TabIndex = 9;
             this.button_povtor.Text = "button1";
             this.button_povtor.UseVisualStyleBackColor = true;
+            this.button_povtor.Click += new System.EventHandler(this.button_povtor_Click);
             // 
             // button_check
             // 

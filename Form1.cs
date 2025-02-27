@@ -57,5 +57,11 @@ namespace ugaday_chislo__
                 label_rez.Text = "Пожалуйста, введите корректное число.";
             }
         }
+
+        private void button_povtor_Click(object sender, EventArgs e)
+        {
+            StartNewGame();
+            button_check.Enabled = true;
+        }
     }
 }
